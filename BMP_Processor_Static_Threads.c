@@ -256,7 +256,7 @@ void *pixelProcessor(void *arg){
             for (i_WIDTH=0 ; i_WIDTH < p->endWidth ; i_WIDTH++) {
                 if ((i_HEIGHT > p->filterSize) && (i_HEIGHT < (p->height) - p->filterSize)
                     && (i_WIDTH > p->filterSize) && (i_WIDTH < (p->width) - p->filterSize)) {
-                    printf("%d  %d\n",i_HEIGHT,i_WIDTH);
+//                    printf("%d  %d\n",i_HEIGHT,i_WIDTH);
                     p->PIXEL_OUT[i_HEIGHT][i_WIDTH].R = p->PIXEL[i_HEIGHT][i_WIDTH].R;
                     p->PIXEL_OUT[i_HEIGHT][i_WIDTH].G = p->PIXEL[i_HEIGHT][i_WIDTH].G;
                     p->PIXEL_OUT[i_HEIGHT][i_WIDTH].B = p->PIXEL[i_HEIGHT][i_WIDTH].B;
@@ -351,7 +351,7 @@ int CONVOLUTION(BITMAP_FILE_HEADER *BFH, BITMAP_INFO_HEADER *BIH, FILE *fp,
 
     for (i=0; i < threads_sum; i++){
         pthread_join(threads[i], NULL);
-        printf("Thread %d: ",i);elapsedTime(i);
+//        printf("Thread %d: ",i);elapsedTime(i);
     }
 
 #ifdef DEBUG
@@ -443,7 +443,7 @@ int main(int argc, char *argv[]) {
 			LIST(&BFH, &BIH);
 #else
 #endif					
-			if (CONVOLUTION(&BFH, &BIH, fp, new_name, filterSize, factor, 4) == 1) {
+			if (CONVOLUTION(&BFH, &BIH, fp, new_name, filterSize, factor, 1) == 1) {
 				printf("Ektropi, mi diathesimi mnimi");
 				return (0);
 			}
