@@ -214,9 +214,9 @@ void *pixelProcessor(void *arg){
                     p->PIXEL_OUT[i_HEIGHT][i_WIDTH+7].G = p->PIXEL[i_HEIGHT][i_WIDTH+7].G;
                     p->PIXEL_OUT[i_HEIGHT][i_WIDTH+7].B = p->PIXEL[i_HEIGHT][i_WIDTH+7].B;
 
-                    __m256i sumRedVec = _mm256_set_epi32(p->PIXEL[i_WIDTH][i_HEIGHT].R, p->PIXEL[i_WIDTH][i_HEIGHT+1].R, p->PIXEL[i_WIDTH][i_HEIGHT+2].R, p->PIXEL[i_WIDTH][i_HEIGHT+3].R, p->PIXEL[i_WIDTH][i_HEIGHT+4].R, p->PIXEL[i_WIDTH][i_HEIGHT+5].R, p->PIXEL[i_WIDTH][i_HEIGHT+6].R, p->PIXEL[i_WIDTH][i_HEIGHT+7].R);
-                    __m256i sumGreenVec = _mm256_set_epi32(p->PIXEL[i_WIDTH][i_HEIGHT].G, p->PIXEL[i_WIDTH][i_HEIGHT+1].G, p->PIXEL[i_WIDTH][i_HEIGHT+2].G, p->PIXEL[i_WIDTH][i_HEIGHT+3].G, p->PIXEL[i_WIDTH][i_HEIGHT+4].G, p->PIXEL[i_WIDTH][i_HEIGHT+5].G, p->PIXEL[i_WIDTH][i_HEIGHT+6].G, p->PIXEL[i_WIDTH][i_HEIGHT+7].G);
-                    __m256i sumBlueVec = _mm256_set_epi32(p->PIXEL[i_WIDTH][i_HEIGHT].B, p->PIXEL[i_WIDTH][i_HEIGHT+1].B, p->PIXEL[i_WIDTH][i_HEIGHT+2].B, p->PIXEL[i_WIDTH][i_HEIGHT+3].B, p->PIXEL[i_WIDTH][i_HEIGHT+4].B, p->PIXEL[i_WIDTH][i_HEIGHT+5].B, p->PIXEL[i_WIDTH][i_HEIGHT+6].B, p->PIXEL[i_WIDTH][i_HEIGHT+7].B);
+                    __m256i sumRedVec = _mm256_set_epi32(p->PIXEL[i_HEIGHT][i_WIDTH].R, p->PIXEL[i_HEIGHT][i_WIDTH+1].R, p->PIXEL[i_HEIGHT][i_WIDTH+2].R, p->PIXEL[i_HEIGHT][i_WIDTH+3].R, p->PIXEL[i_HEIGHT][i_WIDTH+4].R, p->PIXEL[i_HEIGHT][i_WIDTH+5].R, p->PIXEL[i_HEIGHT][i_WIDTH+6].R, p->PIXEL[i_HEIGHT][i_WIDTH+7].R);
+                    __m256i sumGreenVec = _mm256_set_epi32(p->PIXEL[i_HEIGHT][i_WIDTH].G, p->PIXEL[i_HEIGHT][i_WIDTH+1].G, p->PIXEL[i_HEIGHT][i_WIDTH+2].G, p->PIXEL[i_HEIGHT][i_WIDTH+3].G, p->PIXEL[i_HEIGHT][i_WIDTH+4].G, p->PIXEL[i_HEIGHT][i_WIDTH+5].G, p->PIXEL[i_HEIGHT][i_WIDTH+6].G, p->PIXEL[i_HEIGHT][i_WIDTH+7].G);
+                    __m256i sumBlueVec = _mm256_set_epi32(p->PIXEL[i_HEIGHT][i_WIDTH].B, p->PIXEL[i_HEIGHT][i_WIDTH+1].B, p->PIXEL[i_HEIGHT][i_WIDTH+2].B, p->PIXEL[i_HEIGHT][i_WIDTH+3].B, p->PIXEL[i_HEIGHT][i_WIDTH+4].B, p->PIXEL[i_HEIGHT][i_WIDTH+5].B, p->PIXEL[i_HEIGHT][i_WIDTH+6].B, p->PIXEL[i_HEIGHT][i_WIDTH+7].B);
 
                     for (i = i_HEIGHT-p->filterSize;  i<= i_HEIGHT + p->filterSize; i++) {
                         for (j = i_WIDTH-p->filterSize;  j<= i_WIDTH + p->filterSize; j++){
@@ -308,9 +308,9 @@ void *pixelProcessor(void *arg){
                     p->PIXEL_OUT[i_HEIGHT][i_WIDTH+7].G = p->PIXEL[i_HEIGHT][i_WIDTH+7].G;
                     p->PIXEL_OUT[i_HEIGHT][i_WIDTH+7].B = p->PIXEL[i_HEIGHT][i_WIDTH+7].B;
 
-                    __m256i sumRedVec = _mm256_set_epi32(p->PIXEL[i_WIDTH][i_HEIGHT].R, p->PIXEL[i_WIDTH][i_HEIGHT+1].R, p->PIXEL[i_WIDTH][i_HEIGHT+2].R, p->PIXEL[i_WIDTH][i_HEIGHT+3].R, p->PIXEL[i_WIDTH][i_HEIGHT+4].R, p->PIXEL[i_WIDTH][i_HEIGHT+5].R, p->PIXEL[i_WIDTH][i_HEIGHT+6].R, p->PIXEL[i_WIDTH][i_HEIGHT+7].R);
-                    __m256i sumGreenVec = _mm256_set_epi32(p->PIXEL[i_WIDTH][i_HEIGHT].G, p->PIXEL[i_WIDTH][i_HEIGHT+1].G, p->PIXEL[i_WIDTH][i_HEIGHT+2].G, p->PIXEL[i_WIDTH][i_HEIGHT+3].G, p->PIXEL[i_WIDTH][i_HEIGHT+4].G, p->PIXEL[i_WIDTH][i_HEIGHT+5].G, p->PIXEL[i_WIDTH][i_HEIGHT+6].G, p->PIXEL[i_WIDTH][i_HEIGHT+7].G);
-                    __m256i sumBlueVec = _mm256_set_epi32(p->PIXEL[i_WIDTH][i_HEIGHT].B, p->PIXEL[i_WIDTH][i_HEIGHT+1].B, p->PIXEL[i_WIDTH][i_HEIGHT+2].B, p->PIXEL[i_WIDTH][i_HEIGHT+3].B, p->PIXEL[i_WIDTH][i_HEIGHT+4].B, p->PIXEL[i_WIDTH][i_HEIGHT+5].B, p->PIXEL[i_WIDTH][i_HEIGHT+6].B, p->PIXEL[i_WIDTH][i_HEIGHT+7].B);
+                    __m256i sumRedVec = _mm256_set_epi32(p->PIXEL[i_HEIGHT][i_WIDTH].R, p->PIXEL[i_HEIGHT][i_WIDTH+1].R, p->PIXEL[i_HEIGHT][i_WIDTH+2].R, p->PIXEL[i_HEIGHT][i_WIDTH+3].R, p->PIXEL[i_HEIGHT][i_WIDTH+4].R, p->PIXEL[i_HEIGHT][i_WIDTH+5].R, p->PIXEL[i_HEIGHT][i_WIDTH+6].R, p->PIXEL[i_HEIGHT][i_WIDTH+7].R);
+                    __m256i sumGreenVec = _mm256_set_epi32(p->PIXEL[i_HEIGHT][i_WIDTH].G, p->PIXEL[i_HEIGHT][i_WIDTH+1].G, p->PIXEL[i_HEIGHT][i_WIDTH+2].G, p->PIXEL[i_HEIGHT][i_WIDTH+3].G, p->PIXEL[i_HEIGHT][i_WIDTH+4].G, p->PIXEL[i_HEIGHT][i_WIDTH+5].G, p->PIXEL[i_HEIGHT][i_WIDTH+6].G, p->PIXEL[i_HEIGHT][i_WIDTH+7].G);
+                    __m256i sumBlueVec = _mm256_set_epi32(p->PIXEL[i_HEIGHT][i_WIDTH].B, p->PIXEL[i_HEIGHT][i_WIDTH+1].B, p->PIXEL[i_HEIGHT][i_WIDTH+2].B, p->PIXEL[i_HEIGHT][i_WIDTH+3].B, p->PIXEL[i_HEIGHT][i_WIDTH+4].B, p->PIXEL[i_HEIGHT][i_WIDTH+5].B, p->PIXEL[i_HEIGHT][i_WIDTH+6].B, p->PIXEL[i_HEIGHT][i_WIDTH+7].B);
 
                     for (i = i_HEIGHT-p->filterSize;  i<= i_HEIGHT + p->filterSize; i++) {
                         for (j = i_WIDTH-p->filterSize;  j<= i_WIDTH + p->filterSize; j++){
@@ -402,9 +402,9 @@ void *pixelProcessor(void *arg){
                     p->PIXEL_OUT[i_HEIGHT][i_WIDTH+7].G = p->PIXEL[i_HEIGHT][i_WIDTH+7].G;
                     p->PIXEL_OUT[i_HEIGHT][i_WIDTH+7].B = p->PIXEL[i_HEIGHT][i_WIDTH+7].B;
 
-                    __m256i sumRedVec = _mm256_set_epi32(p->PIXEL[i_WIDTH][i_HEIGHT].R, p->PIXEL[i_WIDTH][i_HEIGHT+1].R, p->PIXEL[i_WIDTH][i_HEIGHT+2].R, p->PIXEL[i_WIDTH][i_HEIGHT+3].R, p->PIXEL[i_WIDTH][i_HEIGHT+4].R, p->PIXEL[i_WIDTH][i_HEIGHT+5].R, p->PIXEL[i_WIDTH][i_HEIGHT+6].R, p->PIXEL[i_WIDTH][i_HEIGHT+7].R);
-                    __m256i sumGreenVec = _mm256_set_epi32(p->PIXEL[i_WIDTH][i_HEIGHT].G, p->PIXEL[i_WIDTH][i_HEIGHT+1].G, p->PIXEL[i_WIDTH][i_HEIGHT+2].G, p->PIXEL[i_WIDTH][i_HEIGHT+3].G, p->PIXEL[i_WIDTH][i_HEIGHT+4].G, p->PIXEL[i_WIDTH][i_HEIGHT+5].G, p->PIXEL[i_WIDTH][i_HEIGHT+6].G, p->PIXEL[i_WIDTH][i_HEIGHT+7].G);
-                    __m256i sumBlueVec = _mm256_set_epi32(p->PIXEL[i_WIDTH][i_HEIGHT].B, p->PIXEL[i_WIDTH][i_HEIGHT+1].B, p->PIXEL[i_WIDTH][i_HEIGHT+2].B, p->PIXEL[i_WIDTH][i_HEIGHT+3].B, p->PIXEL[i_WIDTH][i_HEIGHT+4].B, p->PIXEL[i_WIDTH][i_HEIGHT+5].B, p->PIXEL[i_WIDTH][i_HEIGHT+6].B, p->PIXEL[i_WIDTH][i_HEIGHT+7].B);
+                    __m256i sumRedVec = _mm256_set_epi32(p->PIXEL[i_HEIGHT][i_WIDTH].R, p->PIXEL[i_HEIGHT][i_WIDTH+1].R, p->PIXEL[i_HEIGHT][i_WIDTH+2].R, p->PIXEL[i_HEIGHT][i_WIDTH+3].R, p->PIXEL[i_HEIGHT][i_WIDTH+4].R, p->PIXEL[i_HEIGHT][i_WIDTH+5].R, p->PIXEL[i_HEIGHT][i_WIDTH+6].R, p->PIXEL[i_HEIGHT][i_WIDTH+7].R);
+                    __m256i sumGreenVec = _mm256_set_epi32(p->PIXEL[i_HEIGHT][i_WIDTH].G, p->PIXEL[i_HEIGHT][i_WIDTH+1].G, p->PIXEL[i_HEIGHT][i_WIDTH+2].G, p->PIXEL[i_HEIGHT][i_WIDTH+3].G, p->PIXEL[i_HEIGHT][i_WIDTH+4].G, p->PIXEL[i_HEIGHT][i_WIDTH+5].G, p->PIXEL[i_HEIGHT][i_WIDTH+6].G, p->PIXEL[i_HEIGHT][i_WIDTH+7].G);
+                    __m256i sumBlueVec = _mm256_set_epi32(p->PIXEL[i_HEIGHT][i_WIDTH].B, p->PIXEL[i_HEIGHT][i_WIDTH+1].B, p->PIXEL[i_HEIGHT][i_WIDTH+2].B, p->PIXEL[i_HEIGHT][i_WIDTH+3].B, p->PIXEL[i_HEIGHT][i_WIDTH+4].B, p->PIXEL[i_HEIGHT][i_WIDTH+5].B, p->PIXEL[i_HEIGHT][i_WIDTH+6].B, p->PIXEL[i_HEIGHT][i_WIDTH+7].B);
 
                     for (i = i_HEIGHT-p->filterSize;  i<= i_HEIGHT + p->filterSize; i++) {
                         for (j = i_WIDTH-p->filterSize;  j<= i_WIDTH + p->filterSize; j++){
@@ -496,9 +496,9 @@ void *pixelProcessor(void *arg){
                     p->PIXEL_OUT[i_HEIGHT][i_WIDTH+7].G = p->PIXEL[i_HEIGHT][i_WIDTH+7].G;
                     p->PIXEL_OUT[i_HEIGHT][i_WIDTH+7].B = p->PIXEL[i_HEIGHT][i_WIDTH+7].B;
 
-                    __m256i sumRedVec = _mm256_set_epi32(p->PIXEL[i_WIDTH][i_HEIGHT].R, p->PIXEL[i_WIDTH][i_HEIGHT+1].R, p->PIXEL[i_WIDTH][i_HEIGHT+2].R, p->PIXEL[i_WIDTH][i_HEIGHT+3].R, p->PIXEL[i_WIDTH][i_HEIGHT+4].R, p->PIXEL[i_WIDTH][i_HEIGHT+5].R, p->PIXEL[i_WIDTH][i_HEIGHT+6].R, p->PIXEL[i_WIDTH][i_HEIGHT+7].R);
-                    __m256i sumGreenVec = _mm256_set_epi32(p->PIXEL[i_WIDTH][i_HEIGHT].G, p->PIXEL[i_WIDTH][i_HEIGHT+1].G, p->PIXEL[i_WIDTH][i_HEIGHT+2].G, p->PIXEL[i_WIDTH][i_HEIGHT+3].G, p->PIXEL[i_WIDTH][i_HEIGHT+4].G, p->PIXEL[i_WIDTH][i_HEIGHT+5].G, p->PIXEL[i_WIDTH][i_HEIGHT+6].G, p->PIXEL[i_WIDTH][i_HEIGHT+7].G);
-                    __m256i sumBlueVec = _mm256_set_epi32(p->PIXEL[i_WIDTH][i_HEIGHT].B, p->PIXEL[i_WIDTH][i_HEIGHT+1].B, p->PIXEL[i_WIDTH][i_HEIGHT+2].B, p->PIXEL[i_WIDTH][i_HEIGHT+3].B, p->PIXEL[i_WIDTH][i_HEIGHT+4].B, p->PIXEL[i_WIDTH][i_HEIGHT+5].B, p->PIXEL[i_WIDTH][i_HEIGHT+6].B, p->PIXEL[i_WIDTH][i_HEIGHT+7].B);
+                    __m256i sumRedVec = _mm256_set_epi32(p->PIXEL[i_HEIGHT][i_WIDTH].R, p->PIXEL[i_HEIGHT][i_WIDTH+1].R, p->PIXEL[i_HEIGHT][i_WIDTH+2].R, p->PIXEL[i_HEIGHT][i_WIDTH+3].R, p->PIXEL[i_HEIGHT][i_WIDTH+4].R, p->PIXEL[i_HEIGHT][i_WIDTH+5].R, p->PIXEL[i_HEIGHT][i_WIDTH+6].R, p->PIXEL[i_HEIGHT][i_WIDTH+7].R);
+                    __m256i sumGreenVec = _mm256_set_epi32(p->PIXEL[i_HEIGHT][i_WIDTH].G, p->PIXEL[i_HEIGHT][i_WIDTH+1].G, p->PIXEL[i_HEIGHT][i_WIDTH+2].G, p->PIXEL[i_HEIGHT][i_WIDTH+3].G, p->PIXEL[i_HEIGHT][i_WIDTH+4].G, p->PIXEL[i_HEIGHT][i_WIDTH+5].G, p->PIXEL[i_HEIGHT][i_WIDTH+6].G, p->PIXEL[i_HEIGHT][i_WIDTH+7].G);
+                    __m256i sumBlueVec = _mm256_set_epi32(p->PIXEL[i_HEIGHT][i_WIDTH].B, p->PIXEL[i_HEIGHT][i_WIDTH+1].B, p->PIXEL[i_HEIGHT][i_WIDTH+2].B, p->PIXEL[i_HEIGHT][i_WIDTH+3].B, p->PIXEL[i_HEIGHT][i_WIDTH+4].B, p->PIXEL[i_HEIGHT][i_WIDTH+5].B, p->PIXEL[i_HEIGHT][i_WIDTH+6].B, p->PIXEL[i_HEIGHT][i_WIDTH+7].B);
 
                     for (i = i_HEIGHT-p->filterSize;  i<= i_HEIGHT + p->filterSize; i++) {
                         for (j = i_WIDTH-p->filterSize;  j<= i_WIDTH + p->filterSize; j++){
